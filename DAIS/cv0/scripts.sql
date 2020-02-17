@@ -20,7 +20,7 @@ FROM kurz LEFT JOIN studijniplan ON kurz.kod = studijniplan.kod
 WHERE studijniplan.rok = 2009 AND student.prijmeni LIKE 'Plavácek';
 
 -------------------------------------3.-----------------------------------------
-/* Vypište kurzy, které si zapsal student p¡ríjmením Plavácek */
+/* Vypište kurzy, které si zapsal student príjmením Plavácek */
 --------------------------------------------------------------------------------
 SELECT kurz.*
 FROM kurz LEFT JOIN studijniplan ON kurz.kod = studijniplan.kod
@@ -51,6 +51,41 @@ kurz a jejichž pracovní pomer trvá déle než 3 roky. */
 --------------------------------------------------------------------------------
 SELECT DISTINCT ucitel.*
 FROM ucitel JOIN garant ON ucitel.login = garant.login 
-WHERE garant.rok = 2009 AND ucitel.pracpomerkonec - ucitel.pracpomerzacatek > 3*365
+WHERE garant.rok = 2009 AND ucitel.pracpomerkonec - ucitel.pracpomerzacatek > 3*365;
 
+-------------------------------------7.-----------------------------------------
+/* SQL príkazem SELECT * FROM USER_TABLES; vypište ze systémového katalogu 
+všechny tabulky uživatele. */
+--------------------------------------------------------------------------------
+SELECT * FROM user_tables;
 
+-------------------------------------8.-----------------------------------------
+/* SQL príkazem
+SELECT * FROM USER_TAB_COLUMNS WHERE
+TABLE_NAME=’STUDENT’;
+vypište ze systémového katalogu informace o atributech tabulky Student. */
+--------------------------------------------------------------------------------
+SELECT * FROM user_tab_columns WHERE
+table_name = 'student'; -- This one is not working properly
+
+DESC student; -- This one does
+
+-------------------------------------9.-----------------------------------------
+/* Vypište názvy tabulek jejichž je aktuální uživatel vlastník. */
+--------------------------------------------------------------------------------
+SELECT table_name FROM user_tables;
+
+-------------------------------------10.----------------------------------------
+/* Vypište názvy tabulek a vlastníka tabulek ke kterým má aktuální
+uživatel alespon jedno prístupové právo. */
+--------------------------------------------------------------------------------
+SELECT table_name, owner
+FROM all_tables;
+
+-------------------------------------11.----------------------------------------
+/* Vypište názvy atributu a jejich datové typy zvolené tabulky
+vlastnené aktuálním uživatelem. */
+--------------------------------------------------------------------------------
+SELECT column_name, data_type
+FROM user_tab_columns
+WHERE table_name = 'ucitel'

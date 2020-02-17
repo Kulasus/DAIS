@@ -25,5 +25,3 @@ INSERT INTO garant(kod,login,rok) VALUES ('456-dais-01','bay01','2009');
 INSERT INTO garant(kod,login,rok) VALUES ('456-tzd-01','bay01','2009');
 INSERT INTO garant(kod,login,rok) VALUES ('450-apps-01','cod02','2009');
 INSERT INTO garant(kod,login,rok) VALUES ('458-pj-01','cod02','2009');
-
-SELECT * FROM kurz;

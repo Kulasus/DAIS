@@ -1,5 +1,8 @@
-
--- 1
+-------------------------------------1.-----------------------------------------
+/* Vytvorte ulozenou proceduru AddStudent se ctyrmi parametry
+p_login, p_fname, p_lname, p_tallness, která vloží
+nový záznam. Zavolejte uloženou proceduru príkazem EXECUTE. */
+--------------------------------------------------------------------------------
 CREATE OR REPLACE PROCEDURE AddStudent(p_login CHAR, p_fname VARCHAR, p_lname VARCHAR, p_tallness NUMBER) AS
     BEGIN
         INSERT INTO student (login, fname, lname, tallness) VALUES (p_login, p_fname, p_lname, p_tallness);
@@ -8,9 +11,13 @@ CREATE OR REPLACE PROCEDURE AddStudent(p_login CHAR, p_fname VARCHAR, p_lname VA
         WHEN OTHERS THEN ROLLBACK;
 END;
 
-EXECUTE AddStudent('kon035', 'Lukas', 'Kondiolka', 185);
-
--- 2
+-------------------------------------2.-----------------------------------------
+/* Vytvorte uloženou funkci FAddStudent, která bude fungovat stejne jako 
+procedura AddStudent a navíc bude vracet ’ok’, pokud bude záznam úspešne 
+vložen a ’error’ pokud dojde k chybe (Použijte část Exception). K vypsání 
+výsledku funkce použijte funkci dbms_output.put_line. Pred zavoláním této
+funkce je nutné nastavit Set Serveroutput on. */
+--------------------------------------------------------------------------------
 CREATE OR REPLACE FUNCTION FAddStudent(p_login CHAR, p_fname VARCHAR, p_lname VARCHAR, p_tallness NUMBER) RETURN VARCHAR AS
     BEGIN
         INSERT INTO student (login, fname, lname, tallness) VALUES (p_login, p_fname, p_lname, p_tallness);
@@ -28,8 +35,9 @@ BEGIN
     dbms_output.put_line(v_answer);
 END;
 
-
--- 3
+--------------------------------------------------------------------------------
+/* Vytvorte tabulku teacher podle predlohy. */
+--------------------------------------------------------------------------------
 CREATE TABLE Teacher (
 login CHAR(6) NOT NULL PRIMARY KEY,
 fname VARCHAR2(30) NOT NULL,
@@ -37,7 +45,11 @@ lname VARCHAR2(50) NOT NULL,
 department INT NOT NULL,
 specialization VARCHAR2(30) NULL);
 
--- 4 
+-------------------------------------3.-----------------------------------------
+/* Vytvorte proceduru StudentBecomeTeacher se dvema parametry p_login a 
+p_department, která presune záznam studenta s daným loginem z tabulky 
+Student do tabulky Teacher (príkaz SELECT INTO). */
+--------------------------------------------------------------------------------
 CREATE OR REPLACE PROCEDURE StudentBecomeTeacher(p_login student.login%TYPE, p_department teacher.department%TYPE) AS
     v_student Student%ROWTYPE;
     BEGIN
@@ -49,9 +61,9 @@ CREATE OR REPLACE PROCEDURE StudentBecomeTeacher(p_login student.login%TYPE, p_d
         WHEN OTHERS THEN ROLLBACK;
 END;
 
-EXECUTE StudentBecomeTeacher('kon035',2);
-
--- 5
+-------------------------------------4.-----------------------------------------
+/* Upravte proceduru StudentBecomeTeacher tak, aby predstavovala jednu transakci. */
+--------------------------------------------------------------------------------
 CREATE OR REPLACE PROCEDURE StudentBecomeTeacher(p_login student.login%TYPE, p_department teacher.department%TYPE) AS
     v_student Student%ROWTYPE;
     BEGIN
@@ -63,9 +75,11 @@ CREATE OR REPLACE PROCEDURE StudentBecomeTeacher(p_login student.login%TYPE, p_d
         WHEN OTHERS THEN ROLLBACK;
 END;
 
-EXECUTE StudentBecomeTeacher('kon035',2);
-
--- 6
+-------------------------------------5.-----------------------------------------
+/* Vytvorte proceduru AddStudent2 se tremi parametry p_fname, p_lname a 
+p_tallness, která vytvorí login z príjmení (parametr p_lname) pridáním ’00’ 
+a vloží záznam do tabulky (použijte SUBSTR). */
+--------------------------------------------------------------------------------
 CREATE OR REPLACE PROCEDURE AddStudent2(p_fname student.fname%TYPE, p_lname student.lname%TYPE, p_tallness student.tallness%TYPE)AS
     v_login student.login%TYPE := SUBSTR(p_lname,0,3) || '000';
     BEGIN
@@ -75,13 +89,17 @@ CREATE OR REPLACE PROCEDURE AddStudent2(p_fname student.fname%TYPE, p_lname stud
         WHEN OTHERS THEN ROLLBACK;
 END;
 
-EXECUTE AddStudent2('miro','piro',100);
-
--- 7
+-------------------------------------7.-----------------------------------------
+/* Pridejte do tabulky Student atribut isTall, který bude nabývat hodnoty 0 nebo 1.*/
+--------------------------------------------------------------------------------
 ALTER TABLE Student 
 ADD isTall CHAR(1) CONSTRAINT  const_student_isTall CHECK (isTall IN('1','0'));
 
--- 8 
+-------------------------------------8.-----------------------------------------
+/* Vytvorte proceduru IsStudentTall s jedním parametrem p_login, která nalezne
+záznam s daným loginem. Nastaví u nej hodnotu atributu isTall na 0 pokud je atribut 
+tallness menší než jeho prumerná hodnota a hodnotu 1 v opacném prípade (príkaz IF). */
+--------------------------------------------------------------------------------
 CREATE OR REPLACE PROCEDURE IsStudentTall(p_login student.login%TYPE) AS
     v_averageTallness FLOAT; 
     v_student student%ROWTYPE;
@@ -101,10 +119,13 @@ CREATE OR REPLACE PROCEDURE IsStudentTall(p_login student.login%TYPE) AS
     EXCEPTION
         WHEN OTHERS THEN ROLLBACK;
 END;
-        
-EXECUTE IsStudentTall('pir000');
 
--- 9
+-------------------------------------9.-----------------------------------------
+/* Vytvorte funkci LoginExist s jedním parametrem p_login, která vrátí true 
+pokud existuje záznam s loginem p_login. Použijte funkci LoginExist k rozšírení 
+procedury AddStudent2, která bude vytváret login tak dlouho dokud nenalezne 
+nepoužitý login (príkaz LOOP). */
+--------------------------------------------------------------------------------
 CREATE OR REPLACE FUNCTION LoginExist(p_login student.login%TYPE) RETURN BOOLEAN AS
     v_count NUMBER;
     BEGIN
@@ -119,7 +140,6 @@ CREATE OR REPLACE FUNCTION LoginExist(p_login student.login%TYPE) RETURN BOOLEAN
         WHEN OTHERS THEN ROLLBACK;
 END;
 
--- 10
 CREATE OR REPLACE PROCEDURE AddStudent2(p_fname student.fname%TYPE, p_lname student.lname%TYPE, p_tallness student.tallness%TYPE)AS
     v_login student.login%TYPE;
     v_loginNumber NUMBER;
@@ -136,8 +156,11 @@ CREATE OR REPLACE PROCEDURE AddStudent2(p_fname student.fname%TYPE, p_lname stud
         WHEN OTHERS THEN ROLLBACK;
 END;
 
-
--- 11
+-------------------------------------10.----------------------------------------
+/* Upravte proceduru IsStudentTall tak, aby procházela všechny záznamy a 
+nastavovala príslušnou hodnotu atributu isTall. Procedura tedy bude bez parametru.
+Využijte typ student%ROWTYPE a príkazy OPEN, FETCH, CLOSE. */
+--------------------------------------------------------------------------------
 CREATE OR REPLACE PROCEDURE IsStudentTall AS
     v_averageTallness FLOAT;
     v_student student%ROWTYPE;
@@ -164,8 +187,9 @@ CREATE OR REPLACE PROCEDURE IsStudentTall AS
         WHEN OTHERS THEN ROLLBACK;
 END;
 
-
--- 12
+-------------------------------------11.----------------------------------------
+/* Prepište proceduru IsStudentTall aby používala cyklus FOR. */
+--------------------------------------------------------------------------------
 CREATE OR REPLACE PROCEDURE IsStudentTall AS
     v_averageTallness FLOAT; 
     BEGIN
@@ -185,10 +209,3 @@ CREATE OR REPLACE PROCEDURE IsStudentTall AS
     EXCEPTION
         WHEN OTHERS THEN ROLLBACK;
 END;
-
-EXECUTE IsStudentTall();
-
-SELECT * FROM teacher;
-DELETE FROM teacher;
-DELETE FROM student;
-SELECT * FROM student;

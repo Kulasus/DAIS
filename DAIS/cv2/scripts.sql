@@ -178,7 +178,7 @@ CREATE OR REPLACE PROCEDURE IsStudentTall AS
             ELSE 
                 UPDATE student
                 SET istall = '1'
-                WHERE student.login = v_student.login;
+                WHERE student.login = v_student.login;    
             END IF;
         END LOOP;
         CLOSE c_student;

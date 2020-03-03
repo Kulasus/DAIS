@@ -49,11 +49,13 @@ CREATE OR REPLACE PROCEDURE spTestAddPurchase(v_serialNr product.serialNr%TYPE, 
         WHEN ex_noDataException THEN ROLLBACK;
 END;
 
-EXECUTE spTestAddPurchase('WOS-50-K2', 'fantomas', 3000, 3);
+EXECUTE spTestAddPurchase('WOS-50-K2', 'fantomas', 3222, 3);
 SELECT * FROM Purchase;
 
 ALTER TABLE Purchase
 ADD priceDiff INT;
+
+
 
 CREATE OR REPLACE TRIGGER insertPriceDiff BEFORE INSERT ON purchase FOR EACH ROW
 DECLARE 
@@ -61,7 +63,7 @@ l_oldPrice purchase.price%TYPE;
 l_newPrice purchase.price%TYPE;
 l_lastSimiliarPurchase purchase.nID%TYPE;
 BEGIN
-    SELECT MAX(nID) INTO l_lastSimiliarPurchase FROM purchase WHERE :new.nID != nID AND pID = :new.pID;
+    SELECT nID INTO l_lastSimiliarPurchase FROM purchase WHERE :new.nID != nID AND pID = :new.pID AND purchaseDay IN (SELECT MAX(purchaseDay) FROM purchase p2 WHERE :new.pID = pID);
     SELECT price/pieces INTO l_oldPrice FROM purchase WHERE nID = l_lastSimiliarPurchase;
     l_newPrice := :new.price / :new.pieces;
     :new.priceDiff := l_newPrice - l_oldPrice;

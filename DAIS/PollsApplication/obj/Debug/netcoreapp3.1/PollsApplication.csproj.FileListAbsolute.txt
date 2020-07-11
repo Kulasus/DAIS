@@ -1,0 +1,60 @@
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.exe
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\obj\Debug\netcoreapp3.1\PollsApplication.csprojAssemblyReference.cache
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\obj\Debug\netcoreapp3.1\PollsApplication.AssemblyInfoInputs.cache
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\obj\Debug\netcoreapp3.1\PollsApplication.AssemblyInfo.cs
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\obj\Debug\netcoreapp3.1\PollsApplication.csproj.CopyComplete
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.dll.config
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.deps.json
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.runtimeconfig.json
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.runtimeconfig.dev.json
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.pdb
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\obj\Debug\netcoreapp3.1\PollsApplication.dll
+C:\Users\lukas\source\repos\Polls Application 1.0\PollsApplication\obj\Debug\netcoreapp3.1\PollsApplication.pdb
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\obj\Debug\netcoreapp3.1\PollsApplication.csprojAssemblyReference.cache
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\obj\Debug\netcoreapp3.1\PollsApplication.AssemblyInfoInputs.cache
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\obj\Debug\netcoreapp3.1\PollsApplication.AssemblyInfo.cs
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\obj\Debug\netcoreapp3.1\PollsApplication.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\obj\Debug\netcoreapp3.1\PollsApplication.pdb
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.exe
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.dll.config
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.deps.json
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.runtimeconfig.json
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.runtimeconfig.dev.json
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\PollsApplication.pdb
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\lukas\OneDrive\Plocha\PollsApplication\obj\Debug\netcoreapp3.1\PollsApplication.csproj.CopyComplete
